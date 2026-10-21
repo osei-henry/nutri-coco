@@ -297,7 +297,7 @@ export default function Admin() {
         {!supabase ? (
           <section className="mx-auto max-w-xl rounded-3xl border border-brand-100 bg-white p-8 shadow-xl">
             <h1 className="font-display text-3xl font-bold text-brand-900">Admin setup needed</h1>
-            <p className="mt-4 leading-relaxed text-ink/70">Add the Supabase URL and publishable key to the Vercel environment variables, then redeploy this site. Setup steps are in <code>docs/admin-setup.md</code>.</p>
+            <p className="mt-4 leading-relaxed text-ink/70">Add <code>SUPABASE_URL</code> and <code>SUPABASE_PUBLISHABLE_KEY</code> to the Vercel environment variables, then create a new deployment.</p>
           </section>
         ) : !authReady || checkingAdmin ? (
           <div className="flex min-h-64 items-center justify-center gap-3 text-brand-700"><LoaderCircle className="size-6 animate-spin" />Checking admin access…</div>
