@@ -2,12 +2,13 @@ import { motion } from 'motion/react'
 import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { ArrowRight } from 'lucide-react'
-import { sortedPosts } from '../Data/posts'
+import { useSitePosts } from '../hooks/useSiteContent'
 import PostCard from './PostCard'
 
 export default function LatestPosts() {
   const { t } = useTranslation()
-  const latest = sortedPosts.slice(0, 3)
+  const { posts } = useSitePosts()
+  const latest = posts.slice(0, 3)
 
   return (
     <section

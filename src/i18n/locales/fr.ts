@@ -1,150 +1,17 @@
-import type { Translation } from './en'
+﻿import { en } from './en'
+export const fr = {
+  ...en, languageName: 'Francais',
+  nav: { home: 'Accueil', services: 'Nos noix de coco', insurance: 'Commander', doctors: 'Pourquoi Nutri Coco', contact: 'Nous trouver', bookNow: 'Commander', language: 'Langue' },
+  hero: { badge: 'Fraiches du Ghana, pretes a vous rafraichir', title: 'Un gout', highlight: 'des tropiques', subtitle: 'Noix de coco fraiches et eau de coco rafraichissante avec une touche de citron vert, a Airport City.', ctaPrimary: 'Commander en livraison', ctaSecondary: 'Voir nos produits', lensOff: '', lensOn: '', blurred: '', sharp: '' },
+  services: { title: 'Frais, simple et delicieux', subtitle: 'Choisissez une noix de coco fraiche ou une eau de coco avec une touche de citron vert.', items: { fresh: { title: 'Noix de coco fraiches', text: 'Savourez une noix de coco fraiche, prete a ouvrir.' }, water: { title: 'Eau de coco', text: 'Une eau de coco fraiche pour un instant tropical.' }, lime: { title: 'Une touche de citron vert', text: 'Un trait de citron vert apporte une note acidulee a votre eau de coco.' }, delivery: { title: 'Livraison', text: 'Ecrivez-nous sur WhatsApp pour organiser une livraison.' }, pickup: { title: 'Achat sur place', text: 'Venez nous voir a Airport City, Accra.' } } },
+  insurance: { title: 'Profitez de Nutri Coco facilement', subtitle: 'Commandez pour une livraison ou passez nous voir a Airport City.', insurers: 'Choisissez votre mode d achat', cards: 'Au menu', note: 'Envie de fraicheur ? Ecrivez-nous sur WhatsApp pour commander.' },
+  doctors: { title: 'La fraicheur, c est notre specialite', subtitle: 'La simplicite de la noix de coco, avec un peu de soleil tropical.', roles: { whole: 'Noix de coco fraiches', water: 'Eau de coco', lime: 'Une touche de citron vert' } },
+  booking: { title: 'Passer une commande', subtitle: 'Indiquez ce que vous souhaitez. Nous continuerons sur WhatsApp pour organiser la livraison ou l achat sur place.', name: 'Votre nom', phone: 'Telephone', service: 'Que souhaitez-vous ?', selectService: 'Choisir un produit ou une option', date: 'Jour souhaite', time: 'Heure souhaitee', insurance: 'Mode d achat', delivery: 'Livraison', inPerson: 'Acheter sur place', selfPay: 'Choisir plus tard sur WhatsApp', notes: 'Details ou zone de livraison (facultatif)', submit: 'Continuer sur WhatsApp', sending: 'Ouverture de WhatsApp...', success: 'Votre commande est prete. Appuyez sur Envoyer dans WhatsApp.', error: 'Indiquez votre nom, votre telephone et votre choix.' },
+  blog: { title: 'Les notes Coco', subtitle: 'Quelques idees pour savourer la noix de coco et son eau.', all: 'Tout', readMore: 'Lire la suite', back: 'Retour aux notes Coco', latest: 'Les nouveautes de Nutri Coco', viewAll: 'Toutes les histoires', empty: 'Aucune histoire dans cette categorie.', categories: { partners: 'Dans notre cuisine', health: 'Instants coco', events: 'Infos et nouveautes', gallery: 'Inspiration coco' } },
+  faq: { title: 'Bon a savoir', subtitle: 'Reponses rapides avant votre commande ou votre visite.', items: { order: { q: 'Comment commander ?', a: 'Utilisez le formulaire ou ecrivez-nous sur WhatsApp au +233 55 020 7703.' }, delivery: { q: 'Proposez-vous la livraison et l achat sur place ?', a: 'Les deux options sont possibles. Ecrivez-nous sur WhatsApp pour organiser une livraison ou venez a Airport City.' }, products: { q: 'Que vendez-vous ?', a: 'Nous proposons des noix de coco fraiches et de l eau de coco avec une touche de citron vert.' }, location: { q: 'Ou se trouve Nutri Coco ?', a: 'Nous sommes a Airport City, Accra. Contactez-nous pour connaitre les horaires avant votre visite.' } } },
+  testimonials: { title: 'Un instant de fraicheur', subtitle: 'Noix de coco fraiches et eau de coco avec une touche de citron vert.' },
+  gallery: { title: 'Un gout des tropiques', subtitle: 'Noix de coco, eau fraiche et une touche de citron vert.', close: 'Fermer' },
+  contact: { title: 'Nous trouver a Airport City', address: 'Lieu', hours: 'Horaires', whatsapp: 'WhatsApp ou telephone' },
+  footer: { tagline: 'Noix de coco fraiches. Un peu de citron vert, beaucoup de soleil.', rights: 'Tous droits reserves.', admin: 'Admin' },
+} as const
 
-export const fr: Translation = {
-  languageName: 'Français',
-  nav: {
-    home: 'Accueil',
-    services: 'Services',
-    insurance: 'Assurances',
-    doctors: 'Médecins',
-    contact: 'Contact',
-    bookNow: 'Prendre rendez-vous',
-    language: 'Langue',
-  },
-  hero: {
-    badge: 'Des soins oculaires de confiance',
-    title: 'Voyez le monde',
-    highlight: 'clairement à nouveau',
-    subtitle:
-      'Examens de la vue, lunettes, lentilles de contact et chirurgie par une équipe attentionnée au Godly Favored Eye Clinic.',
-    ctaPrimary: 'Prendre rendez-vous',
-    ctaSecondary: 'Nos services',
-    lensOff: 'Sans lentille',
-    lensOn: 'Avec lentille',
-    blurred: 'Flou',
-    sharp: 'Parfaitement net',
-  },
-  services: {
-    title: 'Nos services',
-    subtitle: 'Des soins oculaires complets pour tous les âges, sous un même toit.',
-    items: {
-      exam: {
-        title: 'Examens complets de la vue',
-        text: 'Bilans détaillés de la vision et de la santé des yeux avec des équipements modernes.',
-      },
-      glasses: {
-        title: 'Lunettes et montures',
-        text: 'Des montures élégantes et durables avec des verres adaptés à votre correction.',
-      },
-      contacts: {
-        title: 'Lentilles de contact',
-        text: 'Adaptation et conseils d’experts pour porter vos lentilles confortablement et en bonne santé.',
-      },
-      cataract: {
-        title: 'Chirurgie de la cataracte',
-        text: 'Une chirurgie moderne et sûre pour retrouver une vision claire.',
-      },
-      pediatric: {
-        title: 'Soins oculaires pour enfants',
-        text: 'Des examens tout en douceur et une prise en charge précoce pour les yeux en pleine croissance.',
-      },
-      glaucoma: {
-        title: 'Glaucome et rétine',
-        text: 'Dépistage précoce et suivi régulier pour protéger votre vue.',
-      },
-    },
-  },
-  insurance: {
-    title: 'Assurances et paiements',
-    subtitle:
-      'Nous travaillons avec les principaux assureurs et acceptons les cartes courantes, pour que le paiement de vos soins soit simple.',
-    insurers: 'Assurances acceptées',
-    cards: 'Cartes acceptées',
-    note: 'Vous ne savez pas si votre assurance est couverte ? Écrivez-nous sur WhatsApp et nous vérifierons pour vous.',
-  },
-  doctors: {
-    title: 'Rencontrez nos médecins',
-    subtitle: 'Expérimentés, attentionnés et centrés sur vous.',
-    roles: {
-      ophthalmologist: 'Médecin ophtalmologue',
-      optometrist: 'Optométriste',
-      pediatric: 'Spécialiste de l’œil de l’enfant',
-    },
-  },
-  booking: {
-    title: 'Prendre rendez-vous',
-    subtitle:
-      'Renseignez vos informations et nous continuerons sur WhatsApp pour confirmer votre visite.',
-    name: 'Nom complet',
-    phone: 'Numéro de téléphone',
-    service: 'Service',
-    selectService: 'Choisissez un service',
-    date: 'Date souhaitée',
-    time: 'Heure souhaitée',
-    insurance: 'Assurance',
-    selfPay: 'Sans assurance (paiement personnel)',
-    notes: 'Quelque chose à nous signaler ? (facultatif)',
-    submit: 'Envoyer sur WhatsApp',
-    sending: 'Ouverture de WhatsApp...',
-    success: 'Presque fini ! Appuyez sur Envoyer dans WhatsApp pour confirmer votre rendez-vous.',
-    error: 'Veuillez renseigner votre nom, téléphone, service et date.',
-  },
-  blog: {
-    title: 'Blog et actualités',
-    subtitle:
-      'Histoires, événements et conseils pour la santé des yeux de la famille Godly Favored Eye Clinic.',
-    all: 'Tout',
-    readMore: 'Lire la suite',
-    back: 'Retour au blog',
-    latest: 'Dernières nouvelles du blog',
-    viewAll: 'Voir tous les articles',
-    empty: 'Aucun article dans cette catégorie pour le moment.',
-    categories: {
-      partners: 'Ambassadeurs et sponsors',
-      health: 'Santé des yeux et actualités',
-      events: 'Affiches et événements',
-      gallery: 'Photos et vidéos',
-    },
-  },
-  faq: {
-    title: 'Questions fréquentes',
-    subtitle: 'Des réponses rapides avant votre visite.',
-    items: {
-      visit: {
-        q: 'Que dois-je apporter à mon rendez-vous ?',
-        a: 'Apportez vos lunettes ou lentilles actuelles, la liste de vos médicaments et votre carte d’assurance si vous en avez une.',
-      },
-      insurance: {
-        q: 'Acceptez-vous les assurances ?',
-        a: 'Oui. Nous travaillons avec plusieurs assureurs et acceptons les cartes courantes. Écrivez-nous sur WhatsApp si vous avez un doute sur votre contrat.',
-      },
-      exam: {
-        q: 'Combien de temps dure un examen de la vue ?',
-        a: 'La plupart des examens complets durent environ 30 à 60 minutes. Certains tests peuvent être plus longs.',
-      },
-      kids: {
-        q: 'Recevez-vous les enfants ?',
-        a: 'Oui. Nous soignons les enfants de tous âges, avec des examens tout en douceur et une prise en charge précoce.',
-      },
-    },
-  },
-  testimonials: {
-    title: 'Ce que disent nos patients',
-    subtitle: 'Des mots sincères de ceux dont nous prenons soin.',
-  },
-  gallery: {
-    title: 'Notre clinique en photos',
-    subtitle: 'Un aperçu de l’intérieur de Godly Favored Eye Clinic.',
-    close: 'Fermer',
-  },
-  contact: {
-    title: 'Venez nous voir',
-    address: 'Adresse',
-    hours: 'Horaires d’ouverture',
-    whatsapp: 'WhatsApp',
-  },
-  footer: {
-    tagline: 'Prendre soin de vos yeux, toujours.',
-    rights: 'Tous droits réservés.',
-  },
-}

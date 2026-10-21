@@ -1,150 +1,19 @@
-import type { Translation } from './en'
+﻿import { en } from './en'
+export const tw = {
+  ...en, languageName: 'Twi',
+  nav: { home: 'Fie', services: 'Yen kube', insurance: 'Nnebae a wode beto', doctors: 'Aden nti Nutri Coco', contact: 'Behwe yen', bookNow: 'Hye nneema', language: 'Kasa' },
+  hero: { badge: 'Efi Ghana ha, ahoboa se ebema wo ho adwo wo', title: 'Tropical aduan', highlight: 'a eye de', subtitle: 'Kube foforo ne kube nsu a lime kakra wom, wo Airport City.', ctaPrimary: 'Hye ma womfa mmre wo', ctaSecondary: 'Hwe yen nneema', lensOff: '', lensOn: '', blurred: '', sharp: '' },
+  services: { title: 'Foforo, enye den, na eye de', subtitle: 'Paw kube foforo anaa kube nsu a lime kakra wom.', items: { fresh: { title: 'Kube foforo', text: 'Di kube foforo a wosiesie ama wo no.' }, water: { title: 'Kube nsu', text: 'Kube nsu a eye nwini ma w ani gye.' }, lime: { title: 'Lime kakra', text: 'Lime kakra ma kube nsu no ye de na eye foforo.' }, delivery: { title: 'Wode bebre wo', text: 'Fa WhatsApp bo yen nkommo ma yemfa mmre wo.' }, pickup: { title: 'To wo ha', text: 'Be-to wo de wo Airport City, Accra.' } } },
+  insurance: { title: 'Akwan a wobefa so anya Nutri Coco', subtitle: 'Hye ma womfa mmre wo anaa bra beto wo Airport City.', insurers: 'Paw senea wobeto', cards: 'Nneema a yewo', note: 'Wope biribi a ema wo ho dwo wo? Fa WhatsApp hye.' },
+  doctors: { title: 'Yepe se nneema ye foforo', subtitle: 'Kube a eye de ne owia hann kakra.', roles: { whole: 'Kube foforo', water: 'Kube nsu', lime: 'Lime kakra' } },
+  booking: { title: 'Hye wo kube nɔ', subtitle: 'Kyere yen nea wope. Yebeko WhatsApp so akyere se womfa mmre wo anaa wobeba abeto.', name: 'Wo din', phone: 'Telefon noma', service: 'Kube bɛn na wopɛ?', selectService: 'Paw ade anaa kwan', date: 'Da a wope', time: 'Bere a wope', insurance: 'Kwan a wobefa so ato', delivery: 'Wode bebre wo', inPerson: 'Beto wo ha', selfPay: 'Bepaw wo WhatsApp so', notes: 'Nneema ho nsem anaa beae a wode beko (wope a)', submit: 'Ko WhatsApp so', sending: 'Rebue WhatsApp...', success: 'Wo kube nɔ no ayɛ krado. Mia Send wɔ WhatsApp so.', error: 'Kyere wo din, telefon noma ne nea wope.' },
+  blog: { title: 'Kube ho nsem', subtitle: 'Adwene kakra a ebeboa wo ma w ani agye kube ho.', all: 'Ne nyinaa', readMore: 'Kenkan pii', back: 'San ko kube ho nsem', latest: 'Nsem foforo fi Nutri Coco', viewAll: 'Hwe nsem nyinaa', empty: 'Nsem nni ha seesei.', categories: { partners: 'Yen adididan mu', health: 'Kube anigye', events: 'Nsem foforo', gallery: 'Kube mfonini' } },
+  faq: { title: 'Nneema a ese se wuhu', subtitle: 'Mmuae ntem ansa na woahye anaa woaba.', items: { order: { q: 'Meye den ahye ade?', a: 'Fa kratasin no di dwuma anaa fa WhatsApp bo yen nkommo wo +233 55 020 7703.' }, delivery: { q: 'Wobetumi de abre me anaa mato wo ha?', a: 'Akwan abien no nyinaa wo ho. Fa WhatsApp bo yen nkommo ma yemfa mmre wo, anaa bra Airport City.' }, products: { q: 'Edeen na moton?', a: 'Yeton kube foforo ne kube nsu a lime kakra wom.' }, location: { q: 'Ehe na Nutri Coco wo?', a: 'Yewo Airport City, Accra. Bisa yen bere a yebue ansa na woaba.' } } },
+  testimonials: { title: 'Bere tiaa a ema wo ho dwo wo', subtitle: 'Kube foforo ne kube nsu a lime kakra wom.' },
+  gallery: { title: 'Tropical anigye', subtitle: 'Kube, kube nsu ne lime kakra.', close: 'To mu' },
+  contact: { title: 'Hwehwe yen wo Airport City', address: 'Beae', hours: 'Bere a yebue', whatsapp: 'WhatsApp anaa fre yen' },
+  footer: { tagline: 'Kube foforo. Lime kakra. Owia hann pii.', rights: 'Yen hokwan nyinaa wo ho.', admin: 'Admin' },
+} as const
 
-export const tw: Translation = {
-  languageName: 'Twi',
-  nav: {
-    home: 'Fie',
-    services: 'Yɛn nnwuma',
-    insurance: 'Inshɔrans',
-    doctors: 'Dɔkotafo',
-    contact: 'Nkitahodie',
-    bookNow: 'Hyɛ da seesei',
-    language: 'Kasa',
-  },
-  hero: {
-    badge: 'Aniwa ho ayaresa a wubetumi de wo ho ato so',
-    title: 'Hu wiase no',
-    highlight: 'pefee bio',
-    subtitle:
-      'Aniwa nhwehwɛmu, Aniwa ahwehwɛ, ahwehwɛ no dua ne aniwa oprehyɛn firi nnipa a wɔhwɛ wo yie wɔ Godly Favored Eye Clinic.',
-    ctaPrimary: 'Hyɛ nhyiam da',
-    ctaSecondary: 'Yɛn nnwuma',
-    lensOff: 'Yi aniwa ahwehwɛ no',
-    lensOn: 'Hyɛ aniwa ahwehwɛ no',
-    blurred: 'Ɛnyɛ pefee',
-    sharp: 'Ɛyɛ pefee yie',
-  },
-  services: {
-    title: 'Yɛn nnwuma',
-    subtitle: 'Aniwa ho ayaresa ma obiara, wɔ baabi koro.',
-    items: {
-      exam: {
-        title: 'Aniwa nhwehwɛmu a ɛkɔ akyiri',
-        text: "Yɛhwehwɛ w'aniwa mu yiye de mfiri a ɛyɛ foforo.",
-      },
-      glasses: {
-        title: 'Aniwa ahwehwɛ ne ahwehwɛ no dua',
-        text: "Frames a ɛyɛ fɛ na ɛtra hɔ, ne lens a wɔyɛ ma wo aniwa.",
-      },
-      contacts: {
-        title: 'Aniwa ahwehwɛ',
-        text: "Yɛboa wo ma wohu contact lens a ɛfata wo na ɛyɛ ma w'aniwa yie.",
-      },
-      cataract: {
-        title: 'Aniwa mu kusuu oprehyɛn',
-        text: 'Oprehyɛn a ɛwɔ ahobammɔ na ɛyɛ foforo a ɛma wo hu pefee bio.',
-      },
-      pediatric: {
-        title: "Mmofra aniwa ho ayaresa",
-        text: "Nhwehwɛmu a ɛyɛ mmerɛw ne ayaresa ntɛm ma mmofra aniwa.",
-      },
-      glaucoma: {
-        title: 'Aniwa mu nhyɛsoɔ ne Aniwa mu ntini a ɛgye hann ayaresa',
-        text: "Yɛhunu yare no ntɛm na yɛhwɛ w'aniwa so.",
-      },
-    },
-  },
-  insurance: {
-    title: 'Inshɔrans ne akatua',
-    subtitle:
-      'Yɛne inshɔrans nnwuma akɛse di dwuma na yɛgye cards a nnipa dodo di dwuma, enti akatua yɛ mmerɛw.',
-    insurers: 'Inshɔrans a yɛgye',
-    cards: 'Cards a yɛgye',
-    note: 'Wonnim sɛ wo inshɔrans no wɔ mu? Kyerɛw yɛn wɔ WhatsApp so na yɛahwɛ ama wo.',
-  },
-  doctors: {
-    title: 'Hyia yɛn dɔkotafo',
-    subtitle: 'Wɔwɔ osuahu, wɔyɛ mmerɛw, na wɔde wɔn adwene si wo so.',
-    roles: {
-      ophthalmologist: 'Aniwa dɔkota panin',
-      optometrist: 'Optometrist',
-      pediatric: 'Mmofra aniwa dɔkota',
-    },
-  },
-  booking: {
-    title: 'Hyɛ nhyiam da',
-    subtitle:
-      'Fa wo nsɛm hyɛ mu na yɛbɛkɔ so wɔ WhatsApp so ama yɛahyɛ wo nhyiam no so.',
-    name: 'Wo din nyinaa',
-    phone: 'Wo fon nɔma',
-    service: 'Adwuma a wopɛ',
-    selectService: 'Paw adwuma bi',
-    date: 'Da a wopɛ',
-    time: 'Bere a wopɛ',
-    insurance: 'Inshɔrans',
-    selfPay: 'Menni inshɔrans (mede me ho bɛtua)',
-    notes: 'Biribi a ɛsɛ sɛ yɛhu? (sɛ wopɛ a)',
-    submit: 'Fa kɔ WhatsApp so',
-    sending: 'Yɛrebue WhatsApp...',
-    success: 'Ɛbɛn awie! Mia Send wɔ WhatsApp so na ahyɛ wo nhyiam no so.',
-    error: 'Fa wo din, fon nɔma, adwuma ne da hyɛ mu.',
-  },
-  blog: {
-    title: 'Nsɛm ne asɛm foforo',
-    subtitle:
-      'Nsɛm, nhyiam ne aniwa ho afotu firi Godly Favored Eye Clinic abusua mu.',
-    all: 'Nyinaa',
-    readMore: 'Kenkan kɔ so',
-    back: 'San kɔ blog no so',
-    latest: 'Nsɛm foforo firi yɛn blog',
-    viewAll: 'Hwɛ nsɛm nyinaa',
-    empty: 'Nsɛm biara nni saa nkyekyɛmu yi mu bio.',
-    categories: {
-      partners: 'Ambassadors ne sponsors',
-      health: 'Aniwa ho nsɛm ne asɛm foforo',
-      events: 'Flyers ne nhyiam',
-      gallery: 'Mfonini ne video',
-    },
-  },
-  faq: {
-    title: 'Nsɛmmisa a wobisa mpɛn pii',
-    subtitle: 'Mmuaeɛ a ɛyɛ ntɛm ansa na woaba.',
-    items: {
-      visit: {
-        q: 'Dɛn na ɛsɛ sɛ mede ba me nhyiam no mu?',
-        a: 'Fa glasses anaa contact lens a woredi no, aduro a woredi nyinaa kyerɛwtohɔ, ne w’inshɔrans card sɛ wowɔ.',
-      },
-      insurance: {
-        q: 'Mo gye inshɔrans?',
-        a: 'Aane. Yɛne inshɔrans nnwuma ahorow di dwuma na yɛgye cards a nnipa dodo di dwuma. Kyerɛw yɛn wɔ WhatsApp so sɛ wonnim wo inshɔrans no a.',
-      },
-      exam: {
-        q: 'Aniwa nhwehwɛmu gye bere ahe?',
-        a: 'Aniwa nhwehwɛmu a ɛkɔ akyiri dodo gye simma 30 kosi 60 bɛyɛ. Ebi bi betumi akyɛ kakra.',
-      },
-      kids: {
-        q: 'Mo hwɛ mmofra?',
-        a: 'Aane. Yɛhwɛ mmofra a wɔadi mfe biara, yɛde mmerɛw hwɛ wɔn na yɛhyɛ ayaresa ase ntɛm.',
-      },
-    },
-  },
-  testimonials: {
-    title: 'Deɛ yɛn ayarefoɔ ka',
-    subtitle: 'Nsɛm pa firi nnipa a yɛhwɛ wɔn.',
-  },
-  gallery: {
-    title: 'Yɛn clinic mfonini mu',
-    subtitle: 'Hwɛ Godly Favored Eye Clinic mu.',
-    close: 'To mu',
-  },
-  contact: {
-    title: 'Bra yɛn nkyɛn',
-    address: 'Beae',
-    hours: 'Bere a yebue',
-    whatsapp: 'WhatsApp',
-  },
-  footer: {
-    tagline: "Yɛhwɛ w'aniwa daa.",
-    rights: 'Wɔakora ho ɔfa nyinaa.',
-  },
-}
+
+

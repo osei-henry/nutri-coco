@@ -132,11 +132,11 @@ export default function Contact() {
               className="absolute inset-0 size-full"
               aria-hidden="true"
             >
-              <rect width="400" height="300" fill="#eaf2ff" />
+              <rect width="400" height="300" fill="#f3f8ed" />
               {/* Parks and water */}
               <rect x="20" y="30" width="90" height="70" rx="12" fill="#d7f0df" />
               <rect x="290" y="190" width="95" height="85" rx="12" fill="#d7f0df" />
-              <path d="M0 250 Q100 215 200 255 T400 235 L400 300 L0 300 Z" fill="#c4dcff" />
+              <path d="M0 250 Q100 215 200 255 T400 235 L400 300 L0 300 Z" fill="#d6e7bb" />
               {/* Roads */}
               <g stroke="#fff" strokeLinecap="round" fill="none">
                 <path d="M-10 120 L410 100" strokeWidth="16" />
@@ -146,7 +146,7 @@ export default function Contact() {
                 <path d="M60 -10 L90 310" strokeWidth="8" />
               </g>
               {/* Buildings */}
-              <g fill="#d3e0f7">
+              <g fill="#dce8d3">
                 <rect x="200" y="30" width="40" height="40" rx="6" />
                 <rect x="320" y="30" width="50" height="45" rx="6" />
                 <rect x="210" y="130" width="45" height="40" rx="6" />

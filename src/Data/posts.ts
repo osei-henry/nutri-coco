@@ -1,81 +1,12 @@
 export const categories = ['partners', 'health', 'events', 'gallery'] as const
-
 export type Category = (typeof categories)[number]
+export type Block = { type: 'heading'; text: string } | { type: 'p'; text: string } | { type: 'image'; src: string; caption?: string } | { type: 'video'; src: string; caption?: string }
+export type Post = { slug: string; title: string; date?: string; category: Category; excerpt: string; cover?: string; coverIsVideo?: boolean; content: readonly Block[] }
 
-export type Block =
-  | { type: 'heading'; text: string }
-  | { type: 'p'; text: string }
-  | { type: 'image'; src: string; caption?: string }
-  | { type: 'video'; src: string; caption?: string }
-
-export type Post = {
-  slug: string
-  title: string
-  date?: string // YYYY-MM-DD; omit when no publication date is provided
-  category: Category
-  excerpt: string
-  cover?: string
-  content: readonly Block[]
-}
-
-// These posts use the photos and video supplied in public/blog.
 export const posts: readonly Post[] = [
-  {
-    slug: 'choosing-your-glasses',
-    title: 'Finding frames that feel right',
-    category: 'health',
-    cover: '/blog/image.png',
-    excerpt:
-      'The right pair of glasses should help you see clearly and feel comfortable throughout the day.',
-    content: [
-      {
-        type: 'p',
-        text: 'When choosing frames, consider comfort, fit and the activities you do every day. An eye care professional can help you find a pair that suits your prescription and sits comfortably.',
-      },
-      {
-        type: 'image',
-        src: '/blog/image.png',
-        caption: 'Choosing a pair of frames for everyday wear.',
-      },
-    ],
-  },
-  {
-    slug: 'getting-the-right-fit',
-    title: 'A comfortable fit makes a difference',
-    category: 'health',
-    cover: '/blog/image1.png',
-    excerpt:
-      'A proper fitting helps your glasses sit securely and keeps your lenses in the right position.',
-    content: [
-      {
-        type: 'p',
-        text: 'Glasses should feel secure without pinching or slipping. If your frames feel uncomfortable, ask an optician to check the fit and adjust them for you.',
-      },
-      {
-        type: 'image',
-        src: '/blog/image1.png',
-        caption: 'An optician helping a patient try on glasses.',
-      },
-    ],
-  },
-  {
-    slug: 'eye-care-video',
-    title: 'A closer look at eye care',
-    category: 'gallery',
-    cover: '/blog/image1.png',
-    excerpt: 'Watch the video for a closer look at eye care and eyewear.',
-    content: [
-      {
-        type: 'video',
-        src: '/blog/video.mp4',
-        caption: 'Eye care video.',
-      },
-    ],
-  },
+  { slug: 'fresh-coconut', title: 'Fresh coconut, simply enjoyed', category: 'health', cover: '/Gallery/Coconut.jpeg', excerpt: 'A fresh coconut makes a simple, satisfying tropical moment.', content: [{ type: 'p', text: 'At Nutri Coco, we keep it simple: fresh coconuts, ready to enjoy. Visit us in Airport City or message us to arrange an order.' }, { type: 'image', src: '/Gallery/Coconut.jpeg', caption: 'Fresh coconut from Nutri Coco.' }] },
+  { slug: 'coconut-water-lime', title: 'Coconut water with a touch of lime', category: 'gallery', cover: '/Gallery/Tropical%20Coconut%20Refresh%20%F0%9F%A5%A5%F0%9F%8C%B4.jpeg', excerpt: 'Cool coconut water meets a bright touch of lime.', content: [{ type: 'p', text: 'For a bright, refreshing twist, enjoy coconut water with a touch of lime. Send us a WhatsApp message to order.' }, { type: 'image', src: '/Gallery/Tropical%20Coconut%20Refresh%20%F0%9F%A5%A5%F0%9F%8C%B4.jpeg', caption: 'Coconut water with a tropical touch.' }] },
+  { slug: 'visit-airport-city', title: 'Find Nutri Coco in Airport City', category: 'events', cover: '/Gallery/Say%20no%20to%20Dehydration.jpeg', excerpt: 'Stop by to buy in person, or contact us to arrange delivery.', content: [{ type: 'p', text: 'Nutri Coco serves fresh coconuts and coconut water with a touch of lime in Airport City, Accra. You can visit in person or message us to arrange delivery.' }, { type: 'image', src: '/Gallery/Say%20no%20to%20Dehydration.jpeg', caption: 'A refreshing coconut moment.' }] },
 ]
-
 export const sortedPosts: readonly Post[] = posts
-
-export function getPost(slug: string) {
-  return posts.find((post) => post.slug === slug)
-}
+export function getPost(slug: string) { return posts.find((post) => post.slug === slug) }

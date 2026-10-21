@@ -3,11 +3,11 @@ import { AnimatePresence, motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { Plus } from 'lucide-react'
 
-const ids = ['visit', 'insurance', 'exam', 'kids'] as const
+const ids = ['order', 'delivery', 'products', 'location'] as const
 
 export default function FAQ() {
   const { t } = useTranslation()
-  const [open, setOpen] = useState<(typeof ids)[number] | null>('visit')
+  const [open, setOpen] = useState<(typeof ids)[number] | null>('order')
 
   return (
     <section

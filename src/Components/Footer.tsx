@@ -1,15 +1,14 @@
 import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
-import { Eye, MapPin, Phone } from 'lucide-react'
+import { Leaf, MapPin, Phone } from 'lucide-react'
 import { clinic } from '../Data/clinic'
 
 const links = [
   { id: 'home', to: '/#home', label: 'nav.home' },
   { id: 'services', to: '/#services', label: 'nav.services' },
-  { id: 'insurance', to: '/#insurance', label: 'nav.insurance' },
-  { id: 'doctors', to: '/#doctors', label: 'nav.doctors' },
   { id: 'blog', to: '/blog', label: 'blog.title' },
   { id: 'contact', to: '/#contact', label: 'nav.contact' },
+  { id: 'admin', to: '/admin', label: 'footer.admin' },
 ] as const
 
 export default function Footer() {
@@ -31,13 +30,13 @@ export default function Footer() {
         <div>
           <Link to="/#home" className="flex items-center gap-2.5">
             <span className="relative grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 shadow-lg shadow-brand-500/30">
-              <Eye className="size-6 shrink-0" />
+              <Leaf className="size-6 shrink-0" />
               <span className="absolute -right-1 -top-1 size-3 rounded-full border-2 border-brand-900 bg-accent-500" />
             </span>
             <span className="leading-tight">
-              <span className="block font-display text-lg font-bold">Godly Favored</span>
+              <span className="block font-display text-lg font-bold">Nutri Coco</span>
               <span className="block text-[11px] font-semibold uppercase tracking-widest text-accent-500">
-                Eye Clinic
+                FRESH COCONUTS
               </span>
             </span>
           </Link>

@@ -5,18 +5,18 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Fraunces", ui-serif, Georgia, serif;
 
-  --color-brand-50: #eef5ff;
-  --color-brand-100: #d9e8ff;
-  --color-brand-200: #b6d2ff;
-  --color-brand-500: #2563eb;
-  --color-brand-600: #1d4ed8;
-  --color-brand-700: #1e40af;
-  --color-brand-900: #0f1f4d;
+  --color-brand-50: #f3f8ed;
+  --color-brand-100: #e1edcf;
+  --color-brand-200: #c5dda5;
+  --color-brand-500: #65963b;
+  --color-brand-600: #4e7d2d;
+  --color-brand-700: #3b6325;
+  --color-brand-900: #183b24;
 
-  --color-accent-500: #dc2626;
-  --color-accent-600: #b91c1c;
+  --color-accent-500: #a8c93d;
+  --color-accent-600: #7d9e2d;
 
-  --color-ink: #0b1630;
+  --color-ink: #213428;
 }
 
 html {

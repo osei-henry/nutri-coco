@@ -37,7 +37,9 @@ export default function PostCard({
         >
           {/* Cover */}
           <div className="relative h-48 overflow-hidden">
-            {post.cover ? (
+            {post.cover && post.coverIsVideo ? (
+              <video src={post.cover} muted playsInline preload="metadata" className="size-full object-cover" />
+            ) : post.cover ? (
               <img
                 src={post.cover}
                 alt=""

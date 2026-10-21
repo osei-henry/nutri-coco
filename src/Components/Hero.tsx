@@ -7,7 +7,6 @@ import {
 } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { ArrowRight, CalendarCheck, Phone } from 'lucide-react'
-import LensEye from './LensEye'
 import { clinic } from '../Data/clinic'
 
 const container: Variants = {
@@ -55,8 +54,8 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-60"
         style={{
-          backgroundImage:
-            'radial-gradient(#b6d2ff 1.2px, transparent 1.2px)',
+            backgroundImage:
+            'radial-gradient(#b8d98b 1.2px, transparent 1.2px)',
           backgroundSize: '26px 26px',
           maskImage:
             'radial-gradient(ellipse at 60% 40%, black 10%, transparent 70%)',
@@ -106,7 +105,7 @@ export default function Hero() {
               >
                 <motion.path
                   d="M2 8 Q75 -2 150 6 T298 5"
-                  stroke="#dc2626"
+                  stroke="#84b547"
                   strokeWidth="4"
                   strokeLinecap="round"
                   fill="none"
@@ -163,7 +162,7 @@ export default function Hero() {
           </motion.a>
         </motion.div>
 
-        {/* Animated eye with 3D tilt */}
+        {/* Floating coconut photograph with the original 3D tilt interaction */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -179,7 +178,10 @@ export default function Hero() {
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <LensEye />
+              <div className="relative overflow-hidden rounded-[2rem] border-8 border-white shadow-2xl shadow-brand-900/15">
+                <img src="/Gallery/Tropical%20Coconut%20Refresh%20%F0%9F%A5%A5%F0%9F%8C%B4.jpeg" alt="Fresh coconut water with a touch of lime" className="aspect-[4/3] w-full object-cover" />
+                <span className="absolute bottom-4 left-4 rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-brand-900 shadow-lg">Fresh coconut · A touch of lime</span>
+              </div>
             </motion.div>
           </motion.div>
         </motion.div>

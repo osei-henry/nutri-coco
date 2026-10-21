@@ -1,150 +1,18 @@
-import type { Translation } from './en'
+﻿import { en } from './en'
+export const ga = {
+  ...en, languageName: 'Ga',
+  nav: { home: 'Shia', services: 'Ye kookoo', insurance: 'No ni obaaye', doctors: 'Meni Nutri Coco', contact: 'Baakwe ye', bookNow: 'Hye no', language: 'Gbei' },
+  hero: { badge: 'Fi Ghana, hewo ame ke ba', title: 'Tropics le he', highlight: 'nii hewale', subtitle: 'Kookoo hee ke kookoo nsu ni lime kakra ewo, ye Airport City.', ctaPrimary: 'Hye ni woba keba wo', ctaSecondary: 'Kwemo no ni wowo', lensOff: '', lensOn: '', blurred: '', sharp: '' },
+  services: { title: 'Hee, no efi, ke ede', subtitle: 'Fee kookoo hee anaa kookoo nsu ni lime kakra ewo.', items: { fresh: { title: 'Kookoo hee', text: 'Ka kookoo hee ni wosiesie fo wo.' }, water: { title: 'Kookoo nsu', text: 'Kookoo nsu ni hewo ama bo hewale.' }, lime: { title: 'Lime kakra', text: 'Lime kakra ba kookoo nsu le mli ke hewale.' }, delivery: { title: 'Delivery', text: 'Ke WhatsApp tso ye mli ni yeba keba wo.' }, pickup: { title: 'Ba ke hee', text: 'Ba Airport City, Accra ni ba hee.' } } },
+  insurance: { title: 'Nee Nutri Coco he ba hee', subtitle: 'Hye ni woba keba wo anaa ba beto ye Airport City.', insurers: 'Fee no ni obaaye', cards: 'No ni wowo', note: 'Osumo no ni ebaano hewale? Ke WhatsApp tso ye ni obaahye.' },
+  doctors: { title: 'Yesumo hewale', subtitle: 'Kookoo node ke tropical hewale kakra.', roles: { whole: 'Kookoo hee', water: 'Kookoo nsu', lime: 'Lime kakra' } },
+  booking: { title: 'Hye wo no', subtitle: 'Ke ye no ni osumo. Yeba WhatsApp mli ni yeya delivery anaa obaaye ye.', name: 'Wo ye', phone: 'Telefon noma', service: 'No ni osumo?', selectService: 'Fee no anaa no he', date: 'Be ni osumo', time: 'Alaa ni osumo', insurance: 'No he baaye', delivery: 'Yeba keba wo', inPerson: 'Ba ye ni ba hee', selfPay: 'Fee ye WhatsApp mli', notes: 'No he le anaa delivery be (wope a)', submit: 'Ya WhatsApp mli', sending: 'WhatsApp ebue...', success: 'Wo no le ye krado. Press Send ye WhatsApp mli.', error: 'Ke wo ye, telefon noma ke no ni osumo.' },
+  blog: { title: 'Kookoo he sane', subtitle: 'Adwene kakra ke hewo kookoo ke kookoo nsu he.', all: 'No fee', readMore: 'Kan pii', back: 'San ya kookoo he sane', latest: 'Sane hee ye Nutri Coco', viewAll: 'Kwemo sane fee', empty: 'Sane eko nni ha.', categories: { partners: 'Ye koko mli', health: 'Kookoo hewale', events: 'Sane hee', gallery: 'Kookoo ji' } },
+  faq: { title: 'No ni oka shwie', subtitle: 'Gbejei ba wo hee anaa obaaya.', items: { order: { q: 'Meni mihe hye no?', a: 'Ke kratasin le ye no anaa ke WhatsApp tso ye +233 55 020 7703.' }, delivery: { q: 'Obaanye keba anaa mihe ye ha?', a: 'Akwan enye fee. Ke WhatsApp tso ye ni yeya delivery, anaa ba Airport City.' }, products: { q: 'No ni moton?', a: 'Yeton kookoo hee ke kookoo nsu ni lime kakra ewo.' }, location: { q: 'Nutri Coco ye he?', a: 'Yeye Airport City, Accra. Tso ye ke be ni yebue ansa na obaaba.' } } },
+  testimonials: { title: 'Hewale be kakra', subtitle: 'Kookoo hee ke kookoo nsu ni lime kakra ewo.' },
+  gallery: { title: 'Tropical hewale', subtitle: 'Kookoo, kookoo nsu ke lime kakra.', close: 'To mu' },
+  contact: { title: 'Kwemo ye ye Airport City', address: 'Be', hours: 'Be ni yebue', whatsapp: 'WhatsApp anaa fre ye' },
+  footer: { tagline: 'Kookoo hee. Lime kakra. Owie hewo pii.', rights: 'Hokwan fee ye ye.', admin: 'Admin' },
+} as const
 
-export const ga: Translation = {
-  languageName: 'Ga',
-  nav: {
-    home: 'Wɛ',
-    services: 'Wɔ nitsumɔi',
-    insurance: 'Insurance',
-    doctors: 'Dɔkitai',
-    contact: 'Kɛ wɔ wie',
-    bookNow: 'Book amrɔ nɛɛ',
-    language: 'Wiemɔ',
-  },
-  hero: {
-    badge: 'Hiɛ hewalɛ ni obaanyɛ ohe nɔ',
-    title: 'Nu je lɛ',
-    highlight: 'pɛpɛɛpɛ',
-    subtitle:
-      'Eye exams, glasses, contact lens kɛ eye surgery yɛ Godly Favored Eye Clinic, kɛ weku ni miihe bo.',
-    ctaPrimary: 'Book appointment',
-    ctaSecondary: 'Wɔ nitsumɔi',
-    lensOff: 'Lens lɛ ni akɛ',
-    lensOn: 'Lens lɛ ni ahã',
-    blurred: 'Esɛɛ pɛpɛɛpɛ',
-    sharp: 'Epɛpɛɛpɛ',
-  },
-  services: {
-    title: 'Wɔ nitsumɔi',
-    subtitle: 'Hiɛ hewalɛ nitsumɔ ahã mɔ fɛɛ mɔ, yɛ be kome mli.',
-    items: {
-      exam: {
-        title: 'Eye exams',
-        text: 'Wɔhwɛɔ ohiɛ yɛ mfiri hee ni jeɔ hiɛ mli.',
-      },
-      glasses: {
-        title: 'Glasses kɛ frames',
-        text: 'Frames ni yɛ fɛɛ kɛ lens ni atsɔ ahã ohiɛ.',
-      },
-      contacts: {
-        title: 'Contact lens',
-        text: 'Wɔbaabua bo koni contact lens lɛ ye bo hiɛ nɔ.',
-      },
-      cataract: {
-        title: 'Cataract surgery',
-        text: 'Surgery ni yɛ hewalɛ koni obaanu pɛpɛɛpɛ ekoŋŋ.',
-      },
-      pediatric: {
-        title: 'Bibii hiɛ hewalɛ',
-        text: 'Wɔhwɛɔ bibii hiɛ yɛ shweshwee mli kɛ ayaresa dani be ni kɛ nɔ.',
-      },
-      glaucoma: {
-        title: 'Glaucoma kɛ retina care',
-        text: 'Wɔbaajie yarɛ lɛ shi dani be ni kɛ nɔ koni wɔbaahe ohiɛ.',
-      },
-    },
-  },
-  insurance: {
-    title: 'Insurance kɛ kpaa',
-    subtitle:
-      'Wɔkɛ insurance kpɔlɔi akɛ ayɔɔ cards ni mɛi pii kɛɛ, ni nɔ ni okɛtsuɔ lɛ baaye mlɛo.',
-    insurers: 'Insurance ni wɔyɔɔ',
-    cards: 'Cards ni wɔyɔɔ',
-    note: 'Obaaje shi akɛ ojwɛŋmɔ insurance lɛ yɛ mli? Tsɔɔ wɔ yɛ WhatsApp mli ni wɔbaahwɛ.',
-  },
-  doctors: {
-    title: 'Hɛɛ wɔ dɔkitai lɛ',
-    subtitle: 'Amɛyɛ osuahu, amɛyɛ shweshwee, ni amɛkɛ amɛhe tsɔɔ bo.',
-    roles: {
-      ophthalmologist: 'Consultant Ophthalmologist',
-      optometrist: 'Optometrist',
-      pediatric: 'Bibii hiɛ dɔkita',
-    },
-  },
-  booking: {
-    title: 'Book appointment',
-    subtitle:
-      'Kɛ ojwɛŋmɔ nii ahã ni wɔkɛ baaya nɔ yɛ WhatsApp mli koni wɔjie bo appointment lɛ shi.',
-    name: 'Bo gbɛ fɛɛ',
-    phone: 'Bo fon nɔmba',
-    service: 'Nitsumɔ ni obaasumɔ',
-    selectService: 'Fɛɛ nitsumɔ ko',
-    date: 'Gbi ni obaasumɔ',
-    time: 'Be ni obaasumɔ',
-    insurance: 'Insurance',
-    selfPay: 'Insurance bɛ (mikɛ mihe baatua)',
-    notes: 'Nɔ ko ni esa akɛ wɔle? (kɛ osumɔ)',
-    submit: 'Tsɔɔ yɛ WhatsApp mli',
-    sending: 'Wɔmiibua WhatsApp...',
-    success: 'Ekɛ ewie! Press Send yɛ WhatsApp mli koni appointment lɛ ba mli.',
-    error: 'Ofainɛ, kɛ bo gbɛ, fon nɔmba, nitsumɔ kɛ gbi ahã.',
-  },
-  blog: {
-    title: 'Blog kɛ sane hee',
-    subtitle:
-      'Sane, bɔɔ kɛ hiɛ hewalɛ tsɔɔmɔi yɛ Godly Favored Eye Clinic weku lɛ mli.',
-    all: 'Fɛɛ',
-    readMore: 'Kane ni ya nɔ',
-    back: 'Ya blog lɛ mli',
-    latest: 'Sane hee yɛ wɔ blog lɛ mli',
-    viewAll: 'Kwɛ posts fɛɛ',
-    empty: 'Posts bɛ yɛ gbɛ nɛɛ mli tamɔ.',
-    categories: {
-      partners: 'Ambassadors kɛ sponsors',
-      health: 'Hiɛ hewalɛ kɛ sane hee',
-      events: 'Flyers kɛ nibii ni baa',
-      gallery: 'Foji kɛ videos',
-    },
-  },
-  faq: {
-    title: 'Nibii ni amɛbiɔ pii',
-    subtitle: 'Hetsɛ ni ba shi dani obaaba.',
-    items: {
-      visit: {
-        q: 'Mɛni esa akɛ oba kɛ?',
-        a: 'Ba kɛ glasses loo contact lens ni okɛyeɔ, aduro ni oyeɔ lɛ, kɛ insurance card ni oyɔɔ.',
-      },
-      insurance: {
-        q: 'Ani ohãa insurance?',
-        a: 'Hɛɛ. Wɔkɛ insurance kpɔlɔi babaoo yɛɔ nitsumɔ, ni wɔyɔɔ cards. Kɛ ojɛ shi akɛ ojwɛŋmɔ insurance lɛ yɛ mli, tsɔɔ wɔ yɛ WhatsApp.',
-      },
-      exam: {
-        q: 'Hiɛ exam lɛ yeɔ be ofɛ?',
-        a: 'Eye hiɛ exam pii yeɔ minutes 30 kɛya 60. Ekomɛi baanyɛ aye be babaoo.',
-      },
-      kids: {
-        q: 'Ani ohwɛɔ bibii?',
-        a: 'Hɛɛ. Wɔhwɛɔ bibii ni yɛ afii fɛɛ, yɛ shweshwee mli.',
-      },
-    },
-  },
-  testimonials: {
-    title: 'Nɔ ni wɔ patients kɛɛ',
-    subtitle: 'Wiemɔi pii kɛjɛ mɛi ni wɔhwɛɔ amɛ.',
-  },
-  gallery: {
-    title: 'Wɔ clinic lɛ yɛ foji mli',
-    subtitle: 'Kwɛmɔ Godly Favored Eye Clinic mli.',
-    close: 'Tsu',
-  },
-  contact: {
-    title: 'Ba wɔ gbɛ',
-    address: 'Hei',
-    hours: 'Be ni wɔbuɔ',
-    whatsapp: 'WhatsApp',
-  },
-  footer: {
-    tagline: 'Wɔhwɛɔ ohiɛ daa.',
-    rights: 'Wɔkɛ hewalɛ fɛɛ.',
-  },
-}
+

@@ -2,7 +2,8 @@ import { useEffect, useEffectEvent, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { Camera, ChevronLeft, ChevronRight, X } from 'lucide-react'
-import { galleryItems, type GalleryItem } from '../Data/content'
+import type { GalleryItem } from '../Data/content'
+import { useSiteGallery } from '../hooks/useSiteContent'
 
 const gradients = [
   'from-brand-500 to-brand-700',
@@ -47,6 +48,7 @@ function Picture({
 
 export default function Gallery() {
   const { t } = useTranslation()
+  const galleryItems = useSiteGallery()
   const [open, setOpen] = useState<number | null>(null)
   const total = galleryItems.length
 

@@ -1,6 +1,6 @@
 import { motion, type Variants } from 'motion/react'
 import { useTranslation } from 'react-i18next'
-import { Quote, Star } from 'lucide-react'
+import { Quote } from 'lucide-react'
 import { testimonials } from '../Data/content'
 
 const grid: Variants = {
@@ -69,7 +69,7 @@ export default function Testimonials() {
           viewport={{ once: true, amount: 0.15 }}
           className="mt-14 grid gap-6 md:grid-cols-3"
         >
-          {testimonials.map(({ id, name, role, quote, rating }) => (
+          {testimonials.map(({ id, name, role, quote }) => (
             <motion.figure
               key={id}
               variants={card}
@@ -78,20 +78,6 @@ export default function Testimonials() {
               className="group relative flex flex-col rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur transition-colors duration-300 hover:bg-white/10"
             >
               <Quote className="size-10 fill-accent-500 text-accent-500 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110" />
-
-              <div className="mt-4 flex gap-1" aria-label={`${rating} / 5`}>
-                {Array.from({ length: rating }, (_, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 + i * 0.08, type: 'spring' }}
-                  >
-                    <Star className="size-5 fill-amber-400 text-amber-400" />
-                  </motion.span>
-                ))}
-              </div>
 
               <blockquote className="mt-4 flex-1 text-base leading-relaxed text-white/90 sm:text-lg">
                 {quote}

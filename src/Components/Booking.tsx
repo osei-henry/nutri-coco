@@ -6,22 +6,20 @@ import {
   CalendarDays,
   CheckCircle2,
   Clock,
-  Eye,
+  Leaf,
   MessageCircle,
   Phone,
   Send,
-  ShieldCheck,
+  Truck,
   User,
 } from 'lucide-react'
-import { clinic, insurers, services, timeSlots } from '../Data/clinic'
+import { clinic, purchaseOptions, services } from '../Data/clinic'
 
 type Values = {
   name: string
   phone: string
   service: string
-  date: string
-  time: string
-  insurance: string
+  purchaseMode: string
   notes: string
 }
 
@@ -35,9 +33,7 @@ const emptyValues: Values = {
   name: '',
   phone: '',
   service: '',
-  date: '',
-  time: '',
-  insurance: 'self',
+  purchaseMode: 'delivery',
   notes: '',
 }
 
@@ -54,7 +50,6 @@ const inputBad =
 
 export default function Booking() {
   const { t, i18n } = useTranslation()
-  const today = new Date().toISOString().slice(0, 10)
 
   const [state, formAction, isPending] = useActionState(
     (_previous: FormState, formData: FormData): FormState => {
@@ -63,32 +58,25 @@ export default function Booking() {
         name: get('name'),
         phone: get('phone'),
         service: get('service'),
-        date: get('date'),
-        time: get('time'),
-        insurance: get('insurance') || 'self',
+        purchaseMode: get('purchaseMode') || 'delivery',
         notes: get('notes'),
       }
 
       const phoneOk = values.phone.replace(/\D/g, '').length >= 9
-      if (!values.name || !phoneOk || !values.service || !values.date) {
+      if (!values.name || !phoneOk || !values.service) {
         toast.error(t('booking.error'))
         return { status: 'error', values }
       }
 
       // The message for the manager is always written in English
       const en = i18n.getFixedT('en')
-      const insuranceText =
-        values.insurance === 'self' ? en('booking.selfPay') : values.insurance
-
       const message = [
-        `Hello ${clinic.name}, I would like to book an appointment.`,
+        `Hello ${clinic.name}, I would like to place an order.`,
         '',
         `Name: ${values.name}`,
         `Phone: ${values.phone}`,
-        `Service: ${en(`services.items.${values.service}.title`)}`,
-        `Date: ${values.date}`,
-        `Time: ${values.time || 'Any time'}`,
-        `Insurance: ${insuranceText}`,
+        `Order: ${en(`services.items.${values.service}.title`)}`,
+        `Purchase option: ${en(`booking.${values.purchaseMode}`)}`,
         ...(values.notes ? [`Notes: ${values.notes}`] : []),
       ].join('\n')
 
@@ -107,7 +95,6 @@ export default function Booking() {
     name: showErrors && !state.values.name,
     phone: showErrors && !phoneOk,
     service: showErrors && !state.values.service,
-    date: showErrors && !state.values.date,
   }
 
   const cls = (invalid: boolean) =>
@@ -233,7 +220,7 @@ export default function Booking() {
                 {t('booking.service')}
               </span>
               <span className="relative block">
-                <Eye className="pointer-events-none absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-brand-500" />
+                <Leaf className="pointer-events-none absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-brand-500" />
                 <select
                   name="service"
                   defaultValue={state.values.service}
@@ -251,61 +238,21 @@ export default function Booking() {
               </span>
             </label>
 
-            {/* Date */}
-            <label className="block">
-              <span className="mb-2 block text-sm font-bold text-brand-900">
-                {t('booking.date')}
-              </span>
-              <span className="relative block">
-                <CalendarDays className="pointer-events-none absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-brand-500" />
-                <input
-                  name="date"
-                  type="date"
-                  min={today}
-                  defaultValue={state.values.date}
-                  className={`${cls(bad.date)} pl-11`}
-                />
-              </span>
-            </label>
-
-            {/* Time */}
-            <label className="block">
-              <span className="mb-2 block text-sm font-bold text-brand-900">
-                {t('booking.time')}
-              </span>
-              <span className="relative block">
-                <Clock className="pointer-events-none absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-brand-500" />
-                <select
-                  name="time"
-                  defaultValue={state.values.time}
-                  className={`${cls(false)} pl-11`}
-                >
-                  <option value="">—</option>
-                  {timeSlots.map((slot) => (
-                    <option key={slot} value={slot}>
-                      {slot}
-                    </option>
-                  ))}
-                </select>
-              </span>
-            </label>
-
-            {/* Insurance */}
+            {/* Delivery or in-person purchase */}
             <label className="block sm:col-span-2">
               <span className="mb-2 block text-sm font-bold text-brand-900">
                 {t('booking.insurance')}
               </span>
               <span className="relative block">
-                <ShieldCheck className="pointer-events-none absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-brand-500" />
+                <Truck className="pointer-events-none absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-brand-500" />
                 <select
-                  name="insurance"
-                  defaultValue={state.values.insurance}
+                  name="purchaseMode"
+                  defaultValue={state.values.purchaseMode}
                   className={`${cls(false)} pl-11`}
                 >
-                  <option value="self">{t('booking.selfPay')}</option>
-                  {insurers.map((name) => (
-                    <option key={name} value={name}>
-                      {name}
+                  {purchaseOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {t(`booking.${option}`)}
                     </option>
                   ))}
                 </select>

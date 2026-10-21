@@ -2,7 +2,7 @@ import { useState, useSyncExternalStore, useTransition } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { Link, NavLink } from 'react-router'
 import { useTranslation } from 'react-i18next'
-import { Check, ChevronDown, Eye, Globe, Menu, X } from 'lucide-react'
+import { Check, ChevronDown, Leaf, Globe, Menu, X } from 'lucide-react'
 import { languages } from '../i18n'
 
 const MotionLink = motion.create(Link)
@@ -10,8 +10,6 @@ const MotionLink = motion.create(Link)
 const items = [
   { id: 'home', to: '/#home', label: 'nav.home' },
   { id: 'services', to: '/#services', label: 'nav.services' },
-  { id: 'insurance', to: '/#insurance', label: 'nav.insurance' },
-  { id: 'doctors', to: '/#doctors', label: 'nav.doctors' },
   { id: 'blog', to: '/blog', label: 'blog.title' },
   { id: 'contact', to: '/#contact', label: 'nav.contact' },
 ] as const
@@ -62,15 +60,15 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/#home" className="flex items-center gap-2.5">
           <span className="relative grid size-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-lg shadow-brand-500/30">
-            <Eye className="size-5 shrink-0" />
+            <Leaf className="size-5 shrink-0" />
             <span className="absolute -right-1 -top-1 size-3 rounded-full border-2 border-white bg-accent-500" />
           </span>
           <span className="leading-tight">
             <span className="block font-display text-base font-bold text-brand-900">
-              Godly Favored
+              Nutri Coco
             </span>
             <span className="block text-[11px] font-semibold uppercase tracking-widest text-accent-500">
-              Eye Clinic
+              FRESH COCONUTS
             </span>
           </span>
         </Link>

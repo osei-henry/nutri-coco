@@ -1,150 +1,17 @@
 export const en = {
   languageName: 'English',
-  nav: {
-    home: 'Home',
-    services: 'Services',
-    insurance: 'Insurance',
-    doctors: 'Doctors',
-    contact: 'Contact',
-    bookNow: 'Book now',
-    language: 'Language',
-  },
-  hero: {
-    badge: 'Trusted eye care you can count on',
-    title: 'See the world',
-    highlight: 'clearly again',
-    subtitle:
-      'Expert eye exams, glasses, contact lenses and surgery from a caring team at Godly Favored Eye Clinic.',
-    ctaPrimary: 'Book an appointment',
-    ctaSecondary: 'Our services',
-    lensOff: 'Lens off',
-    lensOn: 'Lens on',
-    blurred: 'Blurry',
-    sharp: 'Crystal clear',
-  },
-  services: {
-    title: 'Our services',
-    subtitle: 'Complete eye care for every age, all under one roof.',
-    items: {
-      exam: {
-        title: 'Comprehensive eye exams',
-        text: 'Detailed vision and eye health checks using modern equipment.',
-      },
-      glasses: {
-        title: 'Glasses & frames',
-        text: 'Stylish, durable frames with lenses made for your prescription.',
-      },
-      contacts: {
-        title: 'Contact lenses',
-        text: 'Expert fitting and advice for comfortable, healthy lens wear.',
-      },
-      cataract: {
-        title: 'Cataract surgery',
-        text: 'Safe, modern surgery to bring back clear vision.',
-      },
-      pediatric: {
-        title: "Children's eye care",
-        text: 'Gentle exams and early treatment for growing eyes.',
-      },
-      glaucoma: {
-        title: 'Glaucoma & retina care',
-        text: 'Early detection and ongoing care to protect your sight.',
-      },
-    },
-  },
-  insurance: {
-    title: 'Insurance & payments',
-    subtitle:
-      'We work with major insurers and accept popular cards, so paying for your care is easy.',
-    insurers: 'Accepted insurance',
-    cards: 'Accepted cards',
-    note: 'Not sure if your plan is covered? Message us on WhatsApp and we will check for you.',
-  },
-  doctors: {
-    title: 'Meet our doctors',
-    subtitle: 'Experienced, gentle and focused on you.',
-    roles: {
-      ophthalmologist: 'Consultant Ophthalmologist',
-      optometrist: 'Optometrist',
-      pediatric: 'Pediatric Eye Specialist',
-    },
-  },
-  booking: {
-    title: 'Book an appointment',
-    subtitle:
-      'Fill in your details and we will continue on WhatsApp to confirm your visit.',
-    name: 'Full name',
-    phone: 'Phone number',
-    service: 'Service',
-    selectService: 'Choose a service',
-    date: 'Preferred date',
-    time: 'Preferred time',
-    insurance: 'Insurance',
-    selfPay: 'No insurance (self-pay)',
-    notes: 'Anything we should know? (optional)',
-    submit: 'Send on WhatsApp',
-    sending: 'Opening WhatsApp...',
-    success: 'Almost done! Tap Send in WhatsApp to confirm your appointment.',
-    error: 'Please fill in your name, phone, service and date.',
-  },
-  blog: {
-    title: 'Blog & news',
-    subtitle:
-      'Stories, events and eye health tips from the Godly Favored Eye Clinic family.',
-    all: 'All',
-    readMore: 'Read more',
-    back: 'Back to blog',
-    latest: 'Latest from our blog',
-    viewAll: 'View all posts',
-    empty: 'No posts in this category yet.',
-    categories: {
-      partners: 'Ambassadors & sponsors',
-      health: 'Eye health & news',
-      events: 'Flyers & events',
-      gallery: 'Photos & videos',
-    },
-  },
-  faq: {
-    title: 'Frequently asked questions',
-    subtitle: 'Quick answers before you visit.',
-    items: {
-      visit: {
-        q: 'What should I bring to my appointment?',
-        a: 'Bring your current glasses or contact lenses, a list of any medicines you take, and your insurance card if you have one.',
-      },
-      insurance: {
-        q: 'Do you accept insurance?',
-        a: 'Yes. We work with several insurance providers and accept popular cards. Message us on WhatsApp if you are unsure about your plan.',
-      },
-      exam: {
-        q: 'How long does an eye exam take?',
-        a: 'Most comprehensive eye exams take about 30 to 60 minutes. Some tests may take longer.',
-      },
-      kids: {
-        q: 'Do you see children?',
-        a: 'Yes. We care for children of all ages, with gentle exams and early treatment.',
-      },
-    },
-  },
-  testimonials: {
-    title: 'What our patients say',
-    subtitle: 'Kind words from the people we care for.',
-  },
-  gallery: {
-    title: 'Our clinic in photos',
-    subtitle: 'A look inside Godly Favored Eye Clinic.',
-    close: 'Close',
-  },
-  contact: {
-    title: 'Visit us',
-    address: 'Address',
-    hours: 'Opening hours',
-    whatsapp: 'WhatsApp',
-  },
-  footer: {
-    tagline: 'Caring for your eyes, always.',
-    rights: 'All rights reserved.',
-  },
-}
+  nav: { home: 'Home', services: 'Our coconuts', insurance: 'Order options', doctors: 'Why Nutri Coco', contact: 'Visit us', bookNow: 'Order now', language: 'Language' },
+  hero: { badge: 'Fresh from Ghana, ready to refresh', title: 'A little taste', highlight: 'of the tropics', subtitle: 'Fresh coconuts and cool coconut water with a touch of lime, served in Airport City.', ctaPrimary: 'Order for delivery', ctaSecondary: 'Explore the menu', lensOff: '', lensOn: '', blurred: '', sharp: '' },
+  services: { title: 'Fresh, simple, delicious', subtitle: 'Choose a whole fresh coconut or refreshing coconut water with a touch of lime.', items: { fresh: { title: 'Fresh coconuts', text: 'Enjoy a fresh coconut, ready to crack open and enjoy.' }, water: { title: 'Coconut water', text: 'Cool, refreshing coconut water for a moment of tropical goodness.' }, lime: { title: 'A touch of lime', text: 'A bright squeeze of lime brings a fresh citrus lift to your coconut water.' }, delivery: { title: 'Delivery orders', text: 'Message us on WhatsApp to arrange a delivery order.' }, pickup: { title: 'Buy in person', text: 'Visit us in Airport City, Accra, to buy in person.' } } },
+  insurance: { title: 'Easy ways to enjoy Nutri Coco', subtitle: 'Order ahead for delivery or stop by to buy in person in Airport City.', insurers: 'Choose how to buy', cards: 'Fresh from the menu', note: 'Ready for something refreshing? Send us a WhatsApp message to place an order.' },
+  doctors: { title: 'Freshness is our thing', subtitle: 'Simple coconut goodness, served with a little tropical sunshine.', roles: { whole: 'Fresh coconuts', water: 'Coconut water', lime: 'A touch of lime' } },
+  booking: { title: 'Place an order', subtitle: 'Tell us what you would like. We will continue on WhatsApp to arrange delivery or in-person purchase.', name: 'Your name', phone: 'Phone number', service: 'What would you like?', selectService: 'Choose a product or option', date: 'Preferred day', time: 'Preferred time', insurance: 'Purchase option', delivery: 'Delivery', inPerson: 'Buy in person', selfPay: 'Choose later on WhatsApp', notes: 'Order details or delivery area (optional)', submit: 'Continue on WhatsApp', sending: 'Opening WhatsApp...', success: 'Your order details are ready. Tap Send in WhatsApp to reach us.', error: 'Please enter your name, phone number, and what you would like.' },
+  blog: { title: 'Coco notes', subtitle: 'A little inspiration for enjoying coconuts and coconut water.', all: 'All', readMore: 'Read more', back: 'Back to Coco notes', latest: 'Fresh from Nutri Coco', viewAll: 'View all stories', empty: 'No stories in this category yet.', categories: { partners: 'From our kitchen', health: 'Coconut moments', events: 'News & updates', gallery: 'Coconut inspiration' } },
+  faq: { title: 'Good to know', subtitle: 'Quick answers before you order or visit.', items: { order: { q: 'How can I place an order?', a: 'Use the order form or WhatsApp us on +233 55 020 7703 and tell us what you would like.' }, delivery: { q: 'Can I get delivery or buy in person?', a: 'Both options are available. Message us on WhatsApp to arrange delivery, or visit us in Airport City.' }, products: { q: 'What do you sell?', a: 'We offer fresh coconuts and coconut water with a touch of lime.' }, location: { q: 'Where can I find Nutri Coco?', a: 'We are in Airport City, Accra. Contact us for current opening hours before visiting.' } } },
+  testimonials: { title: 'A fresh little moment', subtitle: 'Fresh coconuts and coconut water with a touch of lime, from Nutri Coco.' },
+  gallery: { title: 'A taste of the tropics', subtitle: 'Coconuts, cool coconut water and a bright touch of lime.', close: 'Close' },
+  contact: { title: 'Find us in Airport City', address: 'Location', hours: 'Opening hours', whatsapp: 'WhatsApp or call' },
+  footer: { tagline: 'Fresh coconuts. A little lime. A lot of sunshine.', rights: 'All rights reserved.', admin: 'Admin' },
+} as const
 
 export type Translation = typeof en

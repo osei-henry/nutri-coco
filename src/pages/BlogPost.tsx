@@ -2,9 +2,10 @@ import { motion, useScroll } from 'motion/react'
 import { Link, useParams } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { ArrowLeft, CalendarDays, MessageCircle } from 'lucide-react'
-import { getPost, type Block } from '../Data/posts'
+import type { Block } from '../Data/posts'
 import { categoryMeta, formatDate } from '../Data/blog'
 import { clinic } from '../Data/clinic'
+import { useSitePosts } from '../hooks/useSiteContent'
 
 function renderBlock(block: Block, index: number) {
   switch (block.type) {
@@ -71,7 +72,12 @@ export default function BlogPost() {
   const { slug = '' } = useParams()
   const { t, i18n } = useTranslation()
   const { scrollYProgress } = useScroll()
-  const post = getPost(slug)
+  const { posts, loading } = useSitePosts()
+  const post = posts.find((item) => item.slug === slug)
+
+  if (loading && !post) {
+    return <section className="grid min-h-screen place-items-center bg-brand-50 px-4 pt-20">Loading…</section>
+  }
 
   if (!post) {
     return (
@@ -141,7 +147,9 @@ export default function BlogPost() {
             transition={{ duration: 0.6 }}
             className="mt-8 overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/15"
           >
-            {post.cover ? (
+            {post.cover && post.coverIsVideo ? (
+              <video src={post.cover} controls playsInline className="w-full" />
+            ) : post.cover ? (
               <img src={post.cover} alt="" className="w-full" />
             ) : (
               <div

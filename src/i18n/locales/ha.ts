@@ -1,150 +1,17 @@
-import type { Translation } from './en'
+﻿import { en } from './en'
+export const ha = {
+  ...en, languageName: 'Hausa',
+  nav: { home: 'Gida', services: 'Kwakwa namu', insurance: 'Yadda ake oda', doctors: 'Dalilin Nutri Coco', contact: 'Ziyarce mu', bookNow: 'Yi oda yanzu', language: 'Harshe' },
+  hero: { badge: 'Sabo daga Ghana, a shirye don sanyaya maka rai', title: 'Dan dandanon', highlight: 'wurare masu zafi', subtitle: 'Kwakwa sabo da ruwan kwakwa mai sanyi tare da dan lemun tsami a Airport City.', ctaPrimary: 'Yi oda a kawo maka', ctaSecondary: 'Duba kayayyakinmu', lensOff: '', lensOn: '', blurred: '', sharp: '' },
+  services: { title: 'Sabo, sauki, da dadi', subtitle: 'Zabi kwakwa sabo ko ruwan kwakwa mai dan lemun tsami.', items: { fresh: { title: 'Kwakwa sabo', text: 'Ji dadin kwakwa sabo, a shirye ka bude ka sha.' }, water: { title: 'Ruwan kwakwa', text: 'Ruwan kwakwa mai sanyi don dan dandanon wurare masu zafi.' }, lime: { title: 'Dan lemun tsami', text: 'Dan lemun tsami yana kara dandano mai dadi ga ruwan kwakwa.' }, delivery: { title: 'Odar kawo kaya', text: 'Aiko mana da sako a WhatsApp don shirya kawo maka kaya.' }, pickup: { title: 'Saya a wurinmu', text: 'Ziyarce mu a Airport City, Accra, ka saya a wurinmu.' } } },
+  insurance: { title: 'Hanyoyi masu sauki na jin dadin Nutri Coco', subtitle: 'Yi oda a kawo maka ko ka zo ka saya a Airport City.', insurers: 'Zabi yadda za ka saya', cards: 'Kayayyakinmu', note: 'Kana son abin sha mai sanyaya rai? Aiko mana da sako a WhatsApp don yin oda.' },
+  doctors: { title: 'Sabo shi ne abin da muke so', subtitle: 'Dadin kwakwa mai sauki tare da dan hasken rana.', roles: { whole: 'Kwakwa sabo', water: 'Ruwan kwakwa', lime: 'Dan lemun tsami' } },
+  booking: { title: 'Yi odarka', subtitle: 'Fada mana abin da kake so. Za mu ci gaba a WhatsApp don shirya kawo kaya ko saye a wurinmu.', name: 'Sunanka', phone: 'Lambar waya', service: 'Me kake so?', selectService: 'Zabi kaya ko hanya', date: 'Ranar da kake so', time: 'Lokacin da kake so', insurance: 'Hanyar saye', delivery: 'A kawo maka', inPerson: 'Saya a wurinmu', selfPay: 'Zaba daga baya a WhatsApp', notes: 'Cikakken oda ko yankin kawo kaya (na zabi)', submit: 'Ci gaba a WhatsApp', sending: 'Ana bude WhatsApp...', success: 'Bayanan odarka sun shirya. Danna Aika a WhatsApp don tuntubar mu.', error: 'Shigar da sunanka, lambar waya, da abin da kake so.' },
+  blog: { title: 'Labarin kwakwa', subtitle: 'Dan tunani game da jin dadin kwakwa da ruwanta.', all: 'Duka', readMore: 'Kara karantawa', back: 'Koma labarin kwakwa', latest: 'Sabbin labarai daga Nutri Coco', viewAll: 'Duba duk labarai', empty: 'Babu labari a wannan rukuni tukuna.', categories: { partners: 'Daga kicinmu', health: 'Lokacin kwakwa', events: 'Labarai da sabuntawa', gallery: 'Hotunan kwakwa' } },
+  faq: { title: 'Abubuwan sani', subtitle: 'Amsoshi masu sauri kafin yin oda ko ziyara.', items: { order: { q: 'Ta yaya zan yi oda?', a: 'Yi amfani da fom din oda ko aiko mana da sako a WhatsApp ta +233 55 020 7703.' }, delivery: { q: 'Ana kawo kaya ko ana saya a wurin?', a: 'Duk hanyoyin suna nan. Aiko mana da sako a WhatsApp don kawo kaya ko ka ziyarce mu a Airport City.' }, products: { q: 'Me kuke sayarwa?', a: 'Muna da kwakwa sabo da ruwan kwakwa tare da dan lemun tsami.' }, location: { q: 'Ina Nutri Coco yake?', a: 'Muna Airport City, Accra. Tuntube mu don sanin lokutan budewa kafin ziyara.' } } },
+  testimonials: { title: 'Dan lokaci mai sanyaya rai', subtitle: 'Kwakwa sabo da ruwan kwakwa tare da dan lemun tsami.' },
+  gallery: { title: 'Dan dandanon wurare masu zafi', subtitle: 'Kwakwa, ruwan kwakwa mai sanyi da dan lemun tsami.', close: 'Rufe' },
+  contact: { title: 'Nemo mu a Airport City', address: 'Wuri', hours: 'Lokutan budewa', whatsapp: 'WhatsApp ko kira' },
+  footer: { tagline: 'Kwakwa sabo. Dan lemun tsami. Rana mai yawa.', rights: 'Dukkan hakkoki suna nan.', admin: 'Admin' },
+} as const
 
-export const ha: Translation = {
-  languageName: 'Hausa',
-  nav: {
-    home: 'Gida',
-    services: 'Ayyukanmu',
-    insurance: 'Inshora',
-    doctors: 'Likitoci',
-    contact: 'Tuntuɓe mu',
-    bookNow: 'Yi ajiya yanzu',
-    language: 'Harshe',
-  },
-  hero: {
-    badge: 'Kulawar ido da za ka iya dogara da ita',
-    title: 'Ka ga duniya',
-    highlight: 'a sarari kuma',
-    subtitle:
-      'Gwajin ido, tabarau, contact lens da tiyatar ido daga ƙungiya mai kulawa a Godly Favored Eye Clinic.',
-    ctaPrimary: 'Yi ajiyar lokaci',
-    ctaSecondary: 'Ayyukanmu',
-    lensOff: 'An cire lens',
-    lensOn: 'An saka lens',
-    blurred: 'Ba a gani sosai',
-    sharp: 'Fili ƙwarai',
-  },
-  services: {
-    title: 'Ayyukanmu',
-    subtitle: 'Cikakkiyar kulawar ido ga kowane shekaru, a wuri ɗaya.',
-    items: {
-      exam: {
-        title: 'Cikakken gwajin ido',
-        text: 'Cikakken binciken gani da lafiyar ido da na’urori na zamani.',
-      },
-      glasses: {
-        title: 'Tabarau da firam',
-        text: 'Firam masu kyau da ƙarfi tare da gilashin da aka yi bisa bukatar idonka.',
-      },
-      contacts: {
-        title: 'Contact lens',
-        text: 'Taimako na ƙwararru wajen zaɓa da amfani da contact lens cikin jin daɗi da lafiya.',
-      },
-      cataract: {
-        title: 'Tiyatar cataract',
-        text: 'Tiyata mai aminci ta zamani don maido da gani sosai.',
-      },
-      pediatric: {
-        title: 'Kulawar idon yara',
-        text: 'Gwaji mai laushi da magani da wuri ga idon yara masu girma.',
-      },
-      glaucoma: {
-        title: 'Kulawar glaucoma da retina',
-        text: 'Gano cuta da wuri da kulawa mai ci gaba don kare idonka.',
-      },
-    },
-  },
-  insurance: {
-    title: 'Inshora da biyan kuɗi',
-    subtitle:
-      'Muna aiki da manyan kamfanonin inshora kuma muna karɓar katunan da aka fi amfani da su, don haka biyan kuɗin kulawarka abu ne mai sauƙi.',
-    insurers: 'Inshorar da muke karɓa',
-    cards: 'Katunan da muke karɓa',
-    note: 'Ba ka tabbata ko inshorarka tana ciki ba? Aiko mana saƙo ta WhatsApp mu duba maka.',
-  },
-  doctors: {
-    title: 'Ku haɗu da likitocinmu',
-    subtitle: 'Masu ƙwarewa, masu sauƙin hali, kuma suna mai da hankali a kanka.',
-    roles: {
-      ophthalmologist: 'Babban likitan ido',
-      optometrist: 'Optometrist',
-      pediatric: 'Likitan idon yara',
-    },
-  },
-  booking: {
-    title: 'Yi ajiyar lokaci',
-    subtitle:
-      'Cika bayananka, za mu ci gaba a WhatsApp don tabbatar da ziyararka.',
-    name: 'Cikakken suna',
-    phone: 'Lambar waya',
-    service: 'Aiki',
-    selectService: 'Zaɓi aiki',
-    date: 'Ranar da kake so',
-    time: 'Lokacin da kake so',
-    insurance: 'Inshora',
-    selfPay: 'Babu inshora (zan biya da kaina)',
-    notes: 'Akwai wani abu da ya kamata mu sani? (na zaɓi)',
-    submit: 'Aika ta WhatsApp',
-    sending: 'Ana buɗe WhatsApp...',
-    success: 'Kusan an gama! Danna Send a WhatsApp don tabbatar da lokacinka.',
-    error: 'Da fatan za ka cika suna, lambar waya, aiki da rana.',
-  },
-  blog: {
-    title: 'Blog da labarai',
-    subtitle:
-      'Labarai, abubuwan da za su faru da shawarwarin lafiyar ido daga iyalin Godly Favored Eye Clinic.',
-    all: 'Duka',
-    readMore: 'Karanta ƙari',
-    back: 'Koma zuwa blog',
-    latest: 'Sabbin labarai daga blog ɗinmu',
-    viewAll: 'Duba duk rubuce-rubucen',
-    empty: 'Babu rubutu a wannan rukunin tukuna.',
-    categories: {
-      partners: 'Jakadu da masu ɗaukar nauyi',
-      health: 'Lafiyar ido da labarai',
-      events: 'Fosta da abubuwan da za su faru',
-      gallery: 'Hotuna da bidiyo',
-    },
-  },
-  faq: {
-    title: 'Tambayoyin da ake yawan yi',
-    subtitle: 'Amsoshi cikin sauri kafin ziyararka.',
-    items: {
-      visit: {
-        q: 'Me zan kawo lokacin ganawata?',
-        a: 'Ka kawo tabaron ka ko contact lens ɗin da kake amfani da su, jerin magungunan da kake sha, da katin inshorarka idan kana da shi.',
-      },
-      insurance: {
-        q: 'Kuna karɓar inshora?',
-        a: 'Eh. Muna aiki da kamfanonin inshora da yawa kuma muna karɓar katunan da aka fi amfani da su. Aiko mana saƙo ta WhatsApp idan ba ka da tabbas game da shirinka.',
-      },
-      exam: {
-        q: 'Yaya tsawon lokacin gwajin ido?',
-        a: 'Yawancin cikakkun gwajin ido suna ɗaukar kimanin mintuna 30 zuwa 60. Wasu gwaje-gwaje na iya ɗaukar lokaci mai tsawo.',
-      },
-      kids: {
-        q: 'Kuna duba yara?',
-        a: 'Eh. Muna kula da yara na kowane shekaru, tare da gwaji mai laushi da magani da wuri.',
-      },
-    },
-  },
-  testimonials: {
-    title: 'Abin da marasa lafiyarmu ke cewa',
-    subtitle: 'Kalamai masu daɗi daga mutanen da muke kula da su.',
-  },
-  gallery: {
-    title: 'Asibitinmu a hotuna',
-    subtitle: 'Kallon cikin Godly Favored Eye Clinic.',
-    close: 'Rufe',
-  },
-  contact: {
-    title: 'Ku ziyarce mu',
-    address: 'Adireshi',
-    hours: 'Lokutan buɗewa',
-    whatsapp: 'WhatsApp',
-  },
-  footer: {
-    tagline: 'Muna kula da idanunka koyaushe.',
-    rights: 'An kiyaye duk haƙƙoƙi.',
-  },
-}

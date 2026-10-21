@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
-import { categories, sortedPosts, type Category } from '../Data/posts'
+import { categories, type Category } from '../Data/posts'
 import PostCard from '../Components/PostCard'
 import { clinic } from '../Data/clinic'
+import { useSitePosts } from '../hooks/useSiteContent'
 
 type Filter = Category | 'all'
 
@@ -12,11 +13,12 @@ const filters: readonly Filter[] = ['all', ...categories]
 export default function Blog() {
   const { t } = useTranslation()
   const [filter, setFilter] = useState<Filter>('all')
+  const { posts } = useSitePosts()
 
   const visible =
     filter === 'all'
-      ? sortedPosts
-      : sortedPosts.filter((post) => post.category === filter)
+      ? posts
+      : posts.filter((post) => post.category === filter)
 
   return (
     <>
