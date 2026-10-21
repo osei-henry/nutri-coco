@@ -1,12 +1,12 @@
 -- Allow admin stories to publish into a selected public story category with video covers.
 alter table public.site_content
-  add column if not exists category text not null default 'health',
+  add column if not exists category text not null default 'fresh',
   add column if not exists media_type text not null default 'image';
 
 alter table public.site_content
   drop constraint if exists site_content_category_check,
   add constraint site_content_category_check
-    check (category in ('partners', 'health', 'events', 'gallery')),
+    check (category in ('fresh', 'water', 'lime', 'news')),
   drop constraint if exists site_content_media_type_check,
   add constraint site_content_media_type_check
     check (media_type in ('image', 'video'));

@@ -9,7 +9,7 @@ export const supabase =
 export const mediaBucket = 'nutri-coco-media'
 
 export type SiteContentKind = 'blog' | 'post' | 'news'
-export type SiteCategory = 'partners' | 'health' | 'events' | 'gallery'
+export type SiteCategory = 'fresh' | 'water' | 'lime' | 'news'
 
 export type SiteContentRow = {
   id: string

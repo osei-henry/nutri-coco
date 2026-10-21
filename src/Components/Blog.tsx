@@ -56,9 +56,7 @@ export default function Blog() {
                 )}
                 <div className="p-6 sm:p-7">
                   <span className="text-xs font-bold uppercase tracking-[.15em] text-accent-600">
-                    {post.category === 'health'
-                      ? t('blog.categories.health')
-                      : t('blog.categories.gallery')}
+                    {t(`blog.categories.${post.category}`)}
                   </span>
                   <h3 className="mt-2 font-display text-xl font-bold text-brand-900">
                     {post.title}

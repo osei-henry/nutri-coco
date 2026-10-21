@@ -108,7 +108,7 @@ export default function Admin() {
   const [gallery, setGallery] = useState<GalleryRow[]>([])
   const [storageUsed, setStorageUsed] = useState<number | null>(null)
   const [kind, setKind] = useState<SiteContentKind>('blog')
-  const [category, setCategory] = useState<SiteCategory>('health')
+  const [category, setCategory] = useState<SiteCategory>('fresh')
   const [title, setTitle] = useState('')
   const [excerpt, setExcerpt] = useState('')
   const [body, setBody] = useState('')
@@ -346,7 +346,7 @@ export default function Admin() {
                 <div className="flex items-center gap-3"><span className="grid size-11 place-items-center rounded-xl bg-brand-100 text-brand-700"><Newspaper className="size-5" /></span><div><h2 className="text-xl font-bold text-brand-900">Publish a story</h2><p className="text-sm text-ink/60">Appears in Fresh from Nutri Coco and View all stories as soon as it is saved.</p></div></div>
                 <form className="mt-6 space-y-4" onSubmit={publish}>
                   <label className="block text-sm font-bold text-brand-900">Content type<select className={inputClass} value={kind} onChange={(event) => setKind(event.target.value as SiteContentKind)}><option value="blog">Blog article</option><option value="post">Post</option><option value="news">News update</option></select></label>
-                  <label className="block text-sm font-bold text-brand-900">Story category<select className={inputClass} value={category} onChange={(event) => setCategory(event.target.value as SiteCategory)}><option value="partners">{t('blog.categories.partners')}</option><option value="health">{t('blog.categories.health')}</option><option value="events">{t('blog.categories.events')}</option><option value="gallery">{t('blog.categories.gallery')}</option></select></label>
+                  <label className="block text-sm font-bold text-brand-900">Story category<select className={inputClass} value={category} onChange={(event) => setCategory(event.target.value as SiteCategory)}><option value="fresh">{t('blog.categories.fresh')}</option><option value="water">{t('blog.categories.water')}</option><option value="lime">{t('blog.categories.lime')}</option><option value="news">{t('blog.categories.news')}</option></select></label>
                   <label className="block text-sm font-bold text-brand-900">Title<input className={inputClass} maxLength={160} required value={title} onChange={(event) => setTitle(event.target.value)} /></label>
                   <label className="block text-sm font-bold text-brand-900">Short description<input className={inputClass} maxLength={320} required value={excerpt} onChange={(event) => setExcerpt(event.target.value)} /></label>
                   <label className="block text-sm font-bold text-brand-900">Article or update<textarea className={`${inputClass} min-h-40 resize-y`} maxLength={50000} required value={body} onChange={(event) => setBody(event.target.value)} placeholder="Write the content here. Leave a blank line between paragraphs." /></label>

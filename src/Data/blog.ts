@@ -1,17 +1,17 @@
 import {
-  CalendarDays,
-  Camera,
-  HeartPulse,
-  Users,
+  Citrus,
+  Droplets,
+  Leaf,
+  Newspaper,
   type LucideIcon,
 } from 'lucide-react'
 import type { Category } from './posts'
 
 export const categoryMeta = {
-  partners: { icon: Users, gradient: 'from-brand-500 to-brand-700' },
-  health: { icon: HeartPulse, gradient: 'from-accent-500 to-accent-600' },
-  events: { icon: CalendarDays, gradient: 'from-brand-600 to-accent-500' },
-  gallery: { icon: Camera, gradient: 'from-brand-700 to-brand-900' },
+  fresh: { icon: Leaf, gradient: 'from-brand-500 to-brand-700' },
+  water: { icon: Droplets, gradient: 'from-brand-600 to-brand-700' },
+  lime: { icon: Citrus, gradient: 'from-accent-500 to-accent-600' },
+  news: { icon: Newspaper, gradient: 'from-brand-700 to-brand-900' },
 } as const satisfies Record<Category, { icon: LucideIcon; gradient: string }>
 
 const dateLocales: Record<string, string> = {

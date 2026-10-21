@@ -4,11 +4,13 @@ The admin route is `/admin`. It uses Supabase Auth for sign-in, Postgres for con
 
 ## 1. Create a Supabase project
 
-Create a project on the Supabase Free plan. In the SQL Editor, run both migration files in order:
+Create a project on the Supabase Free plan. In the SQL Editor, run these migration files in order:
 
 `supabase/migrations/202610210001_nutri_coco_content.sql`
 
 `supabase/migrations/202610210002_story_categories_and_video.sql`
+
+`supabase/migrations/202610210003_coconut_story_categories.sql`
 
 These create the admin allowlist, published content and gallery tables, the public media bucket, video/category support, and access policies. The bucket serves published media publicly but only allowlisted admins can upload, change, or delete it.
 
